@@ -1,26 +1,28 @@
 import java.util.Scanner;
 
-public class Problem3 {
-    /*
+public class Problem2 {
+    public static void main(String[] args) {
+        /*
+
         With a single integer as the input, generate the following until a = x [series of numbers as shown in below examples]
  
         Output: (examples)
             1) input a = 1, then output : 1
-            2) input a = 2, then output : 1
+            2) input a = 2, then output : 1, 3
             3) input a = 3, then output : 1, 3, 5
-            4) input a = 4, then output : 1, 3, 5
-            5) input a = 5, then output : 1, 3, 5, 7, 9
-            6) input a = 6, then output : 1, 3, 5, 7, 9
-    */
+            4) input a = 4, then output : 1, 3, 5, 7
+        
+        */
 
-    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
-        for (int i = 1; i <= a; i += 2) {
-            System.out.print(i);
-            if (i + 2 <= a) {  
+        int b = 1;
+        for (int i = 1; i <= a; i++) {
+            System.out.print(b);
+            if (i < a) {
                 System.out.print(", ");
             }
+            b += 2;
         }
     }
 }
